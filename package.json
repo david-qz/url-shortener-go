@@ -1,0 +1,14 @@
+{
+  "name": "url-shortener-go",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "go run .",
+    "build": "GOOS=linux GOARCH=amd64 go build -tags lambda.norpc -o bootstrap main.go",
+    "deploy": "npm run build && sls deploy"
+  },
+  "devDependencies": {
+    "serverless": "^3.38.0",
+    "serverless-better-credentials": "^2.0.0"
+  }
+}
